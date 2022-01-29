@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tetris</title>
+<link rel="stylesheet" href="./style.css">
+<link id="easy" href="./easy.mp3">
+<link id="medium" href="./medium.mp3">
+<link id="hard" href="./hard.mp3"></link>
+
+</head>
+<body>
+    <div id="botoes"><button id="start" onclick="drop(), hard.pause(), normal.pause(), easy.play()">Start Game</button>
+        <button id="reset" onclick="resetGame()">Reset</button></div>
+    <canvas id="tetris" width="320" height="610"></canvas>
+    <div>
+    </div>
+    <div>
+
+        <p>          
+            High Score: <span id="highScore"></span>
+        </p>
+
+        <p>          
+            Score: <span id="score"></span>
+        </p>
+        <p style="display:none">
+            Speed: <span id="speed"></span>
+        </p>
+        <button id="easy" onclick="resetGame(), Easy(), hard.pause(), normal.pause(), easy.play()">Easy</button>
+            <button id="normal" onclick="resetGame(), Medium(), easy.pause(), hard.pause(), normal.play()">Normal</button>
+            <button id="hard" onclick="resetGame(), Hard(),  easy.pause(), normal.pause(), hard.play()">Hard</button>
+    </div>
+    <script src="piece.js"></script>
+    <script src="skeletons.js"></script>
+    <script src="functions.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
